@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/shower-htc/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Shower Presentation Engine</h1>
+        <p>Yours Truly, Famous Inc.</p>
+    </header>
+    <section class="slide" id="cover">
+        <h2>Pokémon Go<br/>на веб-технологиях</h2>
+        <p>Егор Коновалов, ЦВТ</p>
+        <img src="pictures/cover.jpg" alt="" class="cover">
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                color: #005EA0;
+                text-shadow: #000 1px 1px 2px, #fff -1px -1px 2px;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: #000;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p a {
+                color: #FFF;
+            }
+
+            #cover img {
+                opacity: .5;
+            }
+        </style>
+    </section>
+    <section class="slide" id="who_am_i">
+        <h2>Егор Коновалов</h2>
+        <img src="pictures/agegorin.jpg" height="300" />
+        <ul>
+            <li>Фронтенд-разработчик.</li>
+            <li>Делаю разные штуки в ЦВТ.</li>
+            <li>Слежу за развитием фронтенда.</li>
+            <li>Хочу внести свой вклад.</li>
+        </ul>
+        <style>
+            #who_am_i img {
+                float: left;
+                margin-right: 30px;
+            }
+            #who_am_i li:before {
+                content: '';
+            }
+        </style>
+    </section>
+    <section class="slide" id="what_is_pokemon_go">
+        <h2>Что это за игра?</h2>
+    </section>
+    <section class="slide" id="what_it_consist">
+        <h2>Из чего состоит</h2>
+    </section>
+    <section class="slide" id="geolocation">
+        <h2>Геолокация</h2>
+    </section>
+    <section class="slide" id="device_orientation">
+        <h2>Положение устройства в пространстве</h2>
+    </section>
+    <section class="slide" id="video_capture">
+        <h2>Захват видео с камеры</h2>
+    </section>
+    <section class="slide" id="3d">
+        <h2>3D</h2>
+    </section>
+
+
+
+    <!--
+        To hide progress bar from entire presentation
+        just remove “progress” element.
+        -->
+    <div class="progress"></div>
+    <script src="shower/shower.min.js"></script>
+</body>
+</html>

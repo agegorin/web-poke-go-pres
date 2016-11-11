@@ -7,7 +7,7 @@ gulp.task('serve', function() {
   server.start();
 
   //use gulp.watch to trigger server actions(notify, start or stop)
-  gulp.watch(['**/*.html'], function (file) {
+  gulp.watch(['index.html','shower/themes/shower-htc/styles/*.css'], function (file) {
     server.notify.apply(server, [file]);
   });
 });

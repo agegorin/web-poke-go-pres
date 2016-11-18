@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "gulp serve"
+  },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-live-server": "^0.0.30"

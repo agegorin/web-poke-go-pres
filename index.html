@@ -88,6 +88,50 @@
             }
         </style>
     </section>
+    <section class="slide" id="geolocation2">
+        <h2>Геолокация</h2>
+        <p>Стандарт: <a href="https://www.w3.org/TR/geolocation-API/">https://www.w3.org/TR/geolocation-API/</a></p>
+        <p>navigator.geolocation.getCurrentPosition()<br />
+            navigator.geolocation.watchPosition()<br />
+            navigator.geolocation.clearWatch()
+        </p>
+    </section>
+    <section class="slide" id="geolocation3">
+        <input type="button" class="btn js-geo-show" value="Получить координаты" />
+        <p class="result js-geo-display"></p>
+        <script>
+          (function(){
+            var shw = document.querySelector('.js-geo-show');
+            var dspl = document.querySelector('.js-geo-display');
+
+            shw.addEventListener('click',function () {
+              if( !navigator.geolocation ) {
+                dspl.innerText = 'Geolocation не поддерживается';
+                return;
+              }
+
+              navigator.geolocation.getCurrentPosition(
+                function(position){
+                  dspl.innerText = 'Координаты: ' + JSON.stringify(position);
+                },
+                function(error){
+                  dspl.innerText = 'Error: ' + JSON.stringify(error);
+                }
+              );
+            });
+          })();
+        </script>
+        <style>
+            #geolocation3 .btn{
+                font-size: 2em;
+                padding: 10px 40px;
+            }
+            #geolocation3 .result{
+                padding: 40px;
+                font-size: 2em;
+            }
+        </style>
+    </section>
     <section class="slide" id="device_orientation">
         <h2>Положение устройства в пространстве</h2>
         <img src="pictures/magnemite.png" height="240" alt="Magnemite" />

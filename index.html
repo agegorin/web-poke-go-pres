@@ -112,8 +112,6 @@
 
               navigator.geolocation.getCurrentPosition(
                 function(position){
-                  console.log(position);
-                  window.q = position;
                   dspl.innerText =
                     'longitude: ' + position.coords.longitude + '\n' +
                     'latitude:  ' + position.coords.latitude
@@ -136,6 +134,19 @@
                 font-size: 2em;
             }
         </style>
+    </section>
+    <section class="slide" id="geolocation-code">
+        <pre>
+            <code>
+navigator.geolocation.getCurrentPosition(
+    function(position){
+      dspl.innerText =
+        'longitude: ' + position.coords.longitude + '\n' +
+        'latitude:  ' + position.coords.latitude
+      ;}
+);
+            </code>
+        </pre>
     </section>
     <section class="slide" id="geolocation-support">
         <img src="pictures/geolocation-support.png" height="400" alt="Geodude" />

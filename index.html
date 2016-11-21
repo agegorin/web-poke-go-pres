@@ -253,6 +253,14 @@ position.timestamp</code></pre>
     <section class="slide" id="device-orientation-caniuse">
         <img src="pictures/device-orient-motion.png" height="400" />
     </section>
+    <section class="slide" id="device-orientation-next">
+        <h2>А потом...</h2>
+        <ul>
+            <li>AccelerometerSensor - <a href="http://www.w3.org/TR/accelerometer/">www.w3.org/TR/accelerometer</a></li>
+            <li>GyroscopeSensor - <a href="http://www.w3.org/TR/gyroscope/">www.w3.org/TR/gyroscope</a></li>
+            <li>MagnetometerSensor - <a href="http://www.w3.org/TR/magnetometer/">www.w3.org/TR/magnetometer</a></li>
+        </ul>
+    </section>
     <section class="slide" id="video_capture">
         <h2>Захват видео с камеры</h2>
         <img src="pictures/poliwhirl.png" height="262" alt="Poliwhirl" />
@@ -261,6 +269,33 @@ position.timestamp</code></pre>
                 position: absolute;
                 bottom: 50px;
                 left: 100px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="video_demo">
+        <input type="button" value="Показать видео с камеры" class="startBtn js-video-start" />
+        <canvas class="canvas js-video-canvas" width="536" height="402"></canvas>
+        <script>
+          (function(){
+            var videoStart = document.querySelector('.js-video-start');
+            var videoCanvas = document.querySelector('.js-video-canvas');
+
+            videoStart.addEventListener('click', function(e){
+              e.preventDefault();
+
+
+            })
+          })()
+        </script>
+        <style>
+            #video_demo .startBtn {
+                float: left;
+                font-size: 2em;
+                padding: 10px 40px;
+                margin-top: -60px;
+            }
+            #video_demo .canvas {
+                clear: both;
             }
         </style>
     </section>
@@ -275,7 +310,38 @@ position.timestamp</code></pre>
             }
         </style>
     </section>
-
+    <section class="slide" id="three_d_webgl">
+        <img src="pictures/WebGL_Logo.svg.png" height="125" width="300" alt="WebGL" /><br />
+        <img class="next" src="pictures/threejs.png" height="116" width="322" alt="three.js" /><br />
+        <img class="next" src="pictures/aframe-name-white.svg" height="70" alt="A-Frame" />
+    </section>
+    <section class="slide" id="three_d_a_frame">
+        <h2><img src="pictures/aframe-name-white.svg" height="50" alt="A-Frame" /></h2>
+        <pre><code>&lt;a-scene>
+  &lt;a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E">&lt/a-sphere>
+  &lt;a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9">&lt;/a-box>
+  &lt;a-sky color="#ECECEC">&lt/a-sky>
+  &lt;a-entity position="0 0 3.8">
+    &lt;a-camera>&lt;/a-camera>
+  &lt;/a-entity>
+&lt;/a-scene></code></pre>
+    </section>
+    <section class="slide" id="aframe-demo">
+        <script src="//aframe.io/releases/0.3.2/aframe.min.js"></script>
+        <a-scene class="aframe-scene">
+            <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+            <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
+            <a-sky color="#ECECEC"></a-sky>
+            <a-entity position="0 0 3.8">
+                <a-camera></a-camera>
+            </a-entity>
+        </a-scene>
+        <style>
+            #aframe-demo {
+                padding: 0;
+            }
+        </style>
+    </section>
 
 
     <!--

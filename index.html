@@ -318,13 +318,18 @@ position.timestamp</code></pre>
     <section class="slide" id="three_d_a_frame">
         <h2><img src="pictures/aframe-name-white.svg" height="50" alt="A-Frame" /></h2>
         <pre><code>&lt;a-scene>
-  &lt;a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E">&lt/a-sphere>
-  &lt;a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9">&lt;/a-box>
+  &lt;a-sphere position="0 1.25 -1" radius="1" ...>&lt/a-sphere>
+  &lt;a-box position="-1 0.5 1" rotation="0 45 0" ...>&lt;/a-box>
   &lt;a-sky color="#ECECEC">&lt/a-sky>
   &lt;a-entity position="0 0 3.8">
     &lt;a-camera>&lt;/a-camera>
   &lt;/a-entity>
 &lt;/a-scene></code></pre>
+        <style>
+            #three_d_a_frame h2 {
+                margin-top: -30px;
+            }
+        </style>
     </section>
     <section class="slide" id="aframe-demo">
         <iframe src="modules/aframe-demo.html" width="1020px" height="640px"></iframe>
@@ -337,6 +342,10 @@ position.timestamp</code></pre>
 
     <section class="slide" id="webgl-support">
         <img src="pictures/webgl-support.png" height="430" alt="webgl support table" />
+    </section>
+
+    <section class="slide" id="reallife-demo">
+        <h2>Reallife демо.</h2>
     </section>
 
     <section class="slide" id="end">

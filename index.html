@@ -148,8 +148,18 @@ navigator.geolocation.getCurrentPosition(
             </code>
         </pre>
     </section>
+    <section class="slide" id="geolocation-additional">
+        <pre><code>position.coords.longitude
+position.coords.latitude
+position.coords.altitude (optional)
+position.coords.accuracy
+position.coords.altitudeAccuracy (optional)
+position.coords.heading
+position.coords.speed
+position.timestamp</code></pre>
+    </section>
     <section class="slide" id="geolocation-support">
-        <img src="pictures/geolocation-support.png" height="400" alt="Geodude" />
+        <img src="pictures/geolocation-support.png" height="400" />
     </section>
     <section class="slide" id="device_orientation">
         <h2>Положение устройства в пространстве</h2>
@@ -170,8 +180,78 @@ navigator.geolocation.getCurrentPosition(
             compassneedcalibration
         </p>
     </section>
-    <section class="slide" id="device_orientation_demo">
+    <section class="slide" id="device-orientation-demo">
+        <h2>Device Orientation Demo</h2>
+        <p class="result js-devorient-display">Device Orientation detection in progress...</p>
+        <script>
+          (function(){
+            var dspl = document.querySelector('.js-devorient-display');
 
+            window.addEventListener('deviceorientation',
+              function(event){
+                dspl.innerText =
+                  'alpha: ' + event.alpha + '\n' +
+                  'beta:  ' + event.beta + '\n' +
+                  'gamma:  ' + event.gamma
+                ;
+              }
+            );
+
+          })();
+        </script>
+        <style>
+            #device-orientation-demo .result{
+                padding: 40px;
+                font-size: 2em;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device-orientation-code">
+        <pre><code>window.addEventListener('deviceorientation',
+  function(event){
+    dspl.innerText =
+      'alpha: ' + event.alpha + '\n' +
+      'beta:  ' + event.beta + '\n' +
+      'gamma:  ' + event.gamma
+    ;
+  }
+);</code></pre>
+    </section>
+    <section class="slide" id="device-orientation-image">
+        <img src="pictures/device-orientation.png" height="500px" />
+        <p>Изображения - <a href="https://dev.opera.com/articles/w3c-device-orientation-api/">dev.opera.com</a></p>
+        <style>
+            #device-orientation-image p{
+                position: absolute;
+                bottom: 0;
+                left: 30px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device-motion-demo">
+        <h2>Device Motion Demo</h2>
+        <p class="result">Get phone in your hands...</p>
+        <style>
+            #device-motion-demo .result{
+                padding: 40px;
+                font-size: 2em;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device-motion-code">
+        <pre><code>window.addEventListener('devicemotion',
+  function (event) {
+    do_something(
+      event.acceleration.x, // y, z
+      event.accelerationIncludingGravity.x, // y, z
+      event.rotationRate.alpha, // beta, gamma
+      event.interval
+    )
+  }
+);</code></pre>
+    </section>
+    <section class="slide" id="device-orientation-caniuse">
+        <img src="pictures/device-orient-motion.png" height="400" />
     </section>
     <section class="slide" id="video_capture">
         <h2>Захват видео с камеры</h2>

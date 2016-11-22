@@ -77,6 +77,13 @@
             </ul>
         </ul>
     </section>
+    <section class="slide" id="whatthe-geo">
+        <img src="pictures/whatthe-geodude.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-geo-view">
+        <h2 class="next">Geodude</h2>
+        <img src="pictures/whatthe-geodude-view.png" alt class="cover"/>
+    </section>
     <section class="slide" id="geolocation">
         <h2>Геолокация</h2>
         <img src="pictures/geodude.png" height="200" alt="Geodude" />
@@ -90,12 +97,8 @@
     </section>
     <section class="slide" id="geolocation-description">
         <h2>Геолокация</h2>
-        <p>Стандарт: <a href="https://www.w3.org/TR/geolocation-API/">https://www.w3.org/TR/geolocation-API/</a></p>
-        <pre>
-            <code>navigator.geolocation.getCurrentPosition()</code>
-            <code>navigator.geolocation.watchPosition()</code>
-            <code>navigator.geolocation.clearWatch()</code>
-        </pre>
+        <p>Стандарт: <a href="https://www.w3.org/TR/geolocation-API/">www.w3.org/TR/geolocation-API</a></p>
+        <p>Recommendation (8 November 2016)</p>
     </section>
     <section class="slide" id="geolocation-demo">
         <input type="button" class="btn js-geo-show" value="Получить координаты" />
@@ -162,6 +165,15 @@
     <section class="slide" id="geolocation-support">
         <img src="pictures/geolocation-support.png" height="400" />
     </section>
+
+    <!-- Device orientation block -->
+    <section class="slide" id="whatthe-do">
+        <img src="pictures/whatthe-magnemite.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-do-view">
+        <h2 class="next">Magnemite</h2>
+        <img src="pictures/whatthe-magnemite-view.png" alt class="cover"/>
+    </section>
     <section class="slide" id="device_orientation">
         <h2>Положение устройства в пространстве</h2>
         <img src="pictures/magnemite.png" height="240" alt="Magnemite" />
@@ -175,12 +187,8 @@
     </section>
     <section class="slide" id="device_orientation-description">
         <h2>Положение устройства в пространстве</h2>
-        <p>Стандарт: <a href="https://www.w3.org/TR/orientation-event/">https://www.w3.org/TR/orientation-event/</a></p>
-        <pre>
-            <code>deviceorientation</code>
-            <code>devicemotion</code>
-            <code>compassneedcalibration</code>
-        </pre>
+        <p>Стандарт: <a href="https://www.w3.org/TR/orientation-event/">www.w3.org/TR/orientation-event</a></p>
+        <p>Candidate Recommendation (18 August 2016)</p>
     </section>
     <section class="slide" id="device-orientation-demo">
         <h2>Device Orientation Demo</h2>
@@ -244,7 +252,7 @@
     </section>
     <section class="slide" id="device-motion-code">
         <pre>
-            <code>window.addEventListener('devicemotion',</code>
+            <code>window.addEventListener('<mark>devicemotion</mark>',</code>
             <code>  function (event) {</code>
             <code>    do_something(</code>
             <code>      event.acceleration.x, // y, z</code>
@@ -266,6 +274,16 @@
             <li>GyroscopeSensor - <a href="http://www.w3.org/TR/gyroscope/">www.w3.org/TR/gyroscope</a></li>
             <li>MagnetometerSensor - <a href="http://www.w3.org/TR/magnetometer/">www.w3.org/TR/magnetometer</a></li>
         </ul>
+        <p>First Public Working Draft (13 September 2016)</p>
+    </section>
+
+    <!-- Video capture block -->
+    <section class="slide" id="whatthe-video">
+        <img src="pictures/whatthe-poliwhirl.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-video-view">
+        <h2 class="next">Poliwhirl</h2>
+        <img src="pictures/whatthe-poliwhirl-view.png" alt class="cover"/>
     </section>
     <section class="slide" id="video_capture">
         <h2>Захват видео с камеры</h2>
@@ -277,6 +295,11 @@
                 left: 100px;
             }
         </style>
+    </section>
+    <section class="slide" id="video-standard">
+        <h2>Media Capture and Streams</h2>
+        <p>Стандарт: <a href="https://w3c.github.io/mediacapture-main/">w3c.github.io/mediacapture-main</a></p>
+        <p>Editor's Draft (13 September 2016)</p>
     </section>
     <section class="slide" id="video-demo">
         <input type="button" value="Показать видео с камеры" class="startBtn js-video-start" />
@@ -347,6 +370,15 @@
             <code>}).then(function (<mark>stream</mark>) { ... });</code>
         </pre>
     </section>
+
+    <!-- 3D -->
+    <section class="slide" id="whatthe-3d">
+        <img src="pictures/whatthe-porygon.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-3d-view">
+        <h2 class="next">Porygon</h2>
+        <img src="pictures/whatthe-porygon-view.png" alt class="cover"/>
+    </section>
     <section class="slide" id="three_d">
         <h2>3D</h2>
         <img src="pictures/porygon.png" height="262" alt="Porygon" />
@@ -390,6 +422,11 @@
 
     <section class="slide" id="webgl-support">
         <img src="pictures/webgl-support.png" height="430" alt="webgl support table" />
+    </section>
+
+    <section class="slide" id="what-next">
+        <h2>Ок, мы знаем технологии, что дальше?</h2>
+
     </section>
 
     <section class="slide" id="reallife-demo">

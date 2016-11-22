@@ -50,8 +50,8 @@
         <h2>Егор Коновалов</h2>
         <img src="pictures/agegorin.jpg" height="300" />
         <ul>
-            <li>Фронтенд-разработчик.</li>
-            <li>Делаю разные штуки в ЦВТ.</li>
+            <li>Фронтенд-разработчик в ЦВТ.</li>
+            <li>Делаю на веб технологиях игры, приложения для телевизоров, VR приложения.</li>
             <li>Слежу за развитием фронтенда.</li>
             <li>Хочу внести свой вклад.</li>
         </ul>
@@ -91,10 +91,11 @@
     <section class="slide" id="geolocation-description">
         <h2>Геолокация</h2>
         <p>Стандарт: <a href="https://www.w3.org/TR/geolocation-API/">https://www.w3.org/TR/geolocation-API/</a></p>
-        <p>navigator.geolocation.getCurrentPosition()<br />
-            navigator.geolocation.watchPosition()<br />
-            navigator.geolocation.clearWatch()
-        </p>
+        <pre>
+            <code>navigator.geolocation.getCurrentPosition()</code>
+            <code>navigator.geolocation.watchPosition()</code>
+            <code>navigator.geolocation.clearWatch()</code>
+        </pre>
     </section>
     <section class="slide" id="geolocation-demo">
         <input type="button" class="btn js-geo-show" value="Получить координаты" />
@@ -137,26 +138,26 @@
     </section>
     <section class="slide" id="geolocation-code">
         <pre>
-            <code>
-navigator.geolocation.getCurrentPosition(
-    function(position){
-      dspl.innerText =
-        'longitude: ' + position.coords.longitude + '\n' +
-        'latitude:  ' + position.coords.latitude
-      ;}
-);
-            </code>
+            <code>navigator.geolocation.<mark>getCurrentPosition</mark>(</code>
+            <code>    function(position){</code>
+            <code>      dspl.innerText =</code>
+            <code>        'longitude: ' + position.coords.longitude + '\n' +</code>
+            <code>        'latitude:  ' + position.coords.latitude</code>
+            <code>      ;}</code>
+            <code>);</code>
         </pre>
     </section>
     <section class="slide" id="geolocation-additional">
-        <pre><code>position.coords.longitude
-position.coords.latitude
-position.coords.altitude (optional)
-position.coords.accuracy
-position.coords.altitudeAccuracy (optional)
-position.coords.heading
-position.coords.speed
-position.timestamp</code></pre>
+        <pre>
+            <code>position.coords.longitude</code>
+            <code>position.coords.latitude</code>
+            <code>position.coords.altitude (optional)</code>
+            <code>position.coords.accuracy</code>
+            <code>position.coords.altitudeAccuracy (optional)</code>
+            <code>position.coords.heading</code>
+            <code>position.coords.speed</code>
+            <code>position.timestamp</code>
+        </pre>
     </section>
     <section class="slide" id="geolocation-support">
         <img src="pictures/geolocation-support.png" height="400" />
@@ -175,10 +176,11 @@ position.timestamp</code></pre>
     <section class="slide" id="device_orientation-description">
         <h2>Положение устройства в пространстве</h2>
         <p>Стандарт: <a href="https://www.w3.org/TR/orientation-event/">https://www.w3.org/TR/orientation-event/</a></p>
-        <p>deviceorientation<br />
-            devicemotion<br />
-            compassneedcalibration
-        </p>
+        <pre>
+            <code>deviceorientation</code>
+            <code>devicemotion</code>
+            <code>compassneedcalibration</code>
+        </pre>
     </section>
     <section class="slide" id="device-orientation-demo">
         <h2>Device Orientation Demo</h2>
@@ -207,15 +209,17 @@ position.timestamp</code></pre>
         </style>
     </section>
     <section class="slide" id="device-orientation-code">
-        <pre><code>window.addEventListener('deviceorientation',
-  function(event){
-    dspl.innerText =
-      'alpha: ' + event.alpha + '\n' +
-      'beta:  ' + event.beta + '\n' +
-      'gamma:  ' + event.gamma
-    ;
-  }
-);</code></pre>
+        <pre>
+            <code>window.addEventListener('<mark>deviceorientation</mark>',</code>
+            <code>  function(event){</code>
+            <code>    dspl.innerText =</code>
+            <code>      'alpha: ' + event.alpha + '\n' +</code>
+            <code>      'beta:  ' + event.beta + '\n' +</code>
+            <code>      'gamma:  ' + event.gamma</code>
+            <code>    ;</code>
+            <code>  }</code>
+            <code>);</code>
+        </pre>
     </section>
     <section class="slide" id="device-orientation-image">
         <img src="pictures/device-orientation.png" height="500px" />
@@ -239,16 +243,18 @@ position.timestamp</code></pre>
         </style>
     </section>
     <section class="slide" id="device-motion-code">
-        <pre><code>window.addEventListener('devicemotion',
-  function (event) {
-    do_something(
-      event.acceleration.x, // y, z
-      event.accelerationIncludingGravity.x, // y, z
-      event.rotationRate.alpha, // beta, gamma
-      event.interval
-    )
-  }
-);</code></pre>
+        <pre>
+            <code>window.addEventListener('devicemotion',</code>
+            <code>  function (event) {</code>
+            <code>    do_something(</code>
+            <code>      event.acceleration.x, // y, z</code>
+            <code>      event.accelerationIncludingGravity.x, // y, z</code>
+            <code>      event.rotationRate.alpha, // beta, gamma</code>
+            <code>      event.interval</code>
+            <code>    )</code>
+            <code>  }</code>
+            <code>);</code>
+        </pre>
     </section>
     <section class="slide" id="device-orientation-caniuse">
         <img src="pictures/device-orient-motion.png" height="400" />
@@ -272,32 +278,74 @@ position.timestamp</code></pre>
             }
         </style>
     </section>
-    <section class="slide" id="video_demo">
+    <section class="slide" id="video-demo">
         <input type="button" value="Показать видео с камеры" class="startBtn js-video-start" />
-        <canvas class="canvas js-video-canvas" width="536" height="402"></canvas>
+        <video class="js-video-el" width="640" height="480" autoplay></video>
         <script>
-          (function(){
-            var videoStart = document.querySelector('.js-video-start');
-            var videoCanvas = document.querySelector('.js-video-canvas');
+            (function () {
+                var videoStart = document.querySelector('.js-video-start');
+                var videoEl = document.querySelector('.js-video-el');
 
-            videoStart.addEventListener('click', function(e){
-              e.preventDefault();
+                videoStart.addEventListener('click', function (e) {
+                    e.preventDefault();
 
+                    navigator.mediaDevices.enumerateDevices()
+                        .then(function (devices) {
 
-            })
-          })()
+                            for (var i = 0; i < devices.length; i++) {
+                                var device = devices[i];
+                                console.log(device.kind, ": ", device.label +
+                                        " id = " + device.deviceId);
+                                if (device.kind === 'videoinput') {
+                                    return navigator.mediaDevices.getUserMedia({
+                                        video: {
+                                            width: 640,
+                                            height: 480,
+                                            deviceId: device.deviceId
+                                        }
+                                    });
+                                }
+                            }
+
+                            return Promise.resolve('q');
+                        })
+                        .then(function( stream ){
+                            console.log(stream);
+                            if( stream === 'q'){
+                                return 0;
+                            }
+
+                            videoEl.src = window.URL.createObjectURL(stream);
+                        })
+                        .catch(function (err) {
+                            console.log(err.name + ": " + err.message);
+                        });
+                })
+            })()
         </script>
         <style>
-            #video_demo .startBtn {
-                float: left;
+            #video-demo .startBtn {
+                display: block;
                 font-size: 2em;
                 padding: 10px 40px;
-                margin-top: -60px;
+                margin: -60px auto 10px auto;
             }
-            #video_demo .canvas {
-                clear: both;
+            #video-demo video {
+                display: block;
+                margin: 0 auto;
             }
         </style>
+    </section>
+    <section class="slide" id="video-code">
+        <pre>
+            <code>navigator.mediaDevices.<mark>enumerateDevices()</mark></code>
+            <code>  .then(function (<mark>devices</mark>) { ... });</code>
+        </pre>
+        <pre>
+            <code>navigator.mediaDevices.<mark>getUserMedia</mark>({</code>
+            <code>  video: { deviceId: device[i].deviceId }</code>
+            <code>}).then(function (<mark>stream</mark>) { ... });</code>
+        </pre>
     </section>
     <section class="slide" id="three_d">
         <h2>3D</h2>
